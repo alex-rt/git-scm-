@@ -1,2 +1,88 @@
 -CHAPTER 3
--
+-New branch
+$ git branch testing
+
+-Switching branches
+$ git checkout testing
+
+-moving a branch forward
+$ vim test.rb
+$ git commit -a -m 'made a change'
+
+-switch back to the master branch
+$ git checkout master
+
+-diverge project history
+$ vim test.rb
+$ git commit -a -m 'made other changes'
+
+-see divergent history
+$ git log --oneline --decorate --graph --all
+
+-create branch ad swich to it
+$ git checkout -b {branch}
+
+-branch pointer
+$ vim index.html
+$ git commit -a -m 'Create new footer [issue 53]'
+
+-delete branch 
+$ git branch -d {branch}
+
+-merge into master branch
+$ git merge 
+
+-visual merge tool:
+$ git mergetool
+
+-list of current branches
+$ git branch
+
+-see last commit on branch 
+$ git branch -v
+
+-list of branches merged into the current one
+$ git branch --merged
+
+-list of branches not merget into the current one
+$ git branch --no--merged
+
+-list of remote refrences
+git ls-remote <remote>, or git remote show <remote>
+
+-branch working with others
+$ git push origin {}
+
+-merge work into current working branch
+$ git checkout -b serverfix origin/{}
+
+-track branch origin
+$ git checkout --track origin/{}
+
+-shortcut to branch tracking
+$ git checkout {}
+
+-set up local branch with nifferent name
+$ git checkout -b {newnameofbranch} origin/{}
+
+-see tracking branches set up
+$ git branch -vv
+
+-fetch from all remotes
+$ git fetch --all; git branch -vv
+
+-deleting remote branches
+$ git push origin --delete {}
+
+-rebase branch
+$ git checkout experiment
+$ git rebase master
+
+-fast-forward merge
+$ git checkout master
+$ git merge experiment
+
+-final commit history
+$ git branch -d {}
+$ git branch -d {}
+//remove all the branches once the work is integrated
